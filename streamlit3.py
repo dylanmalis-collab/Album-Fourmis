@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 
 # Nos données utilisateurs doivent respecter ce format
-df = pd.read_csv("https://github.com/dylanmalis-collab/Album-Fourmis/blob/main/compte.csv",sep=';')
+df = pd.read_csv("https://raw.githubusercontent.com/dylanmalis-collab/Album-Fourmis/main/compte.csv",sep=';')
 lesDonneesDesComptes = {"usernames" : {}}
 
 for index, row in df.iterrows():
@@ -40,19 +40,19 @@ def accueil():
         # Contenu de la première colonne : 
         with col1:
             st.header("Formica sanguinea")
-            st.image("D:/Utilisateurs/Dylan Malis/Téléchargements/6aeb62c8-5791-4e58-8fb3-a9878a71d8cf.jpg")
-            st.image("D:/Utilisateurs/Dylan Malis/Téléchargements/3f4eb70b-f8ad-487b-bb9e-e8c86fb465d6.jpg")
-            st.image("D:/Utilisateurs/Dylan Malis/Téléchargements/90493b36-304a-4072-aee3-babb5d20c94d.jpg")
+            st.image("https://raw.githubusercontent.com/dylanmalis-collab/Album-Fourmis/main/6aeb62c8-5791-4e58-8fb3-a9878a71d8cf.jpg")
+            st.image("https://raw.githubusercontent.com/dylanmalis-collab/Album-Fourmis/main/3f4eb70b-f8ad-487b-bb9e-e8c86fb465d6.jpg")
+            st.image("https://raw.githubusercontent.com/dylanmalis-collab/Album-Fourmis/main/90493b36-304a-4072-aee3-babb5d20c94d.jpg")
 
         # Contenu de la deuxième colonne :
         with col2:
             st.header("Camponotus cruentatus")
-            st.image("D:/Utilisateurs/Dylan Malis/Téléchargements/0786ea7a-29d9-4f8d-9e9b-f42bf6469532.jpg")
+            st.image("https://raw.githubusercontent.com/dylanmalis-collab/Album-Fourmis/main/0786ea7a-29d9-4f8d-9e9b-f42bf6469532.jpg")
 
         # Contenu de la troisième colonne : 
         with col3:
             st.header("Lasius umbratus")
-            st.image("D:/Utilisateurs/Dylan Malis/Téléchargements/ee5f0094-7ec1-43fa-955f-f19cffd3ec77.jpg")
+            st.image("https://raw.githubusercontent.com/dylanmalis-collab/Album-Fourmis/main/ee5f0094-7ec1-43fa-955f-f19cffd3ec77.jpg")
 
 if st.session_state["authentication_status"]:
   accueil()
@@ -64,3 +64,4 @@ elif st.session_state["authentication_status"] is False:
 elif st.session_state["authentication_status"] is None:
 
     st.warning('Les champs username et mot de passe doivent être remplie')
+
